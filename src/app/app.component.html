@@ -21,6 +21,6 @@
       </div>
     </form>
 
-    <h4 class="text-center mt-4">Resultado: <span class="text-primary">{{ result }}</span></h4>
+    <h4 class="text-center mt-4">Resultado: <span *ngIf="calculado" class="text-primary">{{ result }}</span></h4>
   </div>
 </div>
