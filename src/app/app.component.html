@@ -1,26 +1,20 @@
-<h1 class="text-center my-4">{{ title }}</h1>
+<nav class="navbar navbar-expand-lg bg-body-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="calculadora">Calculadora</a>
+      </ul>
+    </div> 
+  </div> 
+</nav>
+<br><br>
 
-<div class="container">
-  <div class="card shadow-sm p-4">
-    <form class="mb-3">
-      <div class="mb-3">
-        <label for="num1" class="form-label">Número 1:</label>
-        <input type="number" [(ngModel)]="num1" name="num1" class="form-control">
-      </div>
-
-      <div class="mb-3">
-        <label for="num2" class="form-label">Número 2:</label>
-        <input type="number" [(ngModel)]="num2" name="num2" class="form-control">
-      </div>
-
-      <div class="d-flex justify-content-center gap-2">
-        <button type="button" class="btn btn-primary" (click)="sumar()">Sumar</button>
-        <button type="button" class="btn btn-secondary" (click)="resta()">Restar</button>
-        <button type="button" class="btn btn-success" (click)="multiplicar()">Multiplicar</button>
-        <button type="button" class="btn btn-danger" (click)="dividir()">Dividir</button>
-      </div>
-    </form>
-
-    <h4 class="text-center mt-4">Resultado: <span *ngIf="calculado" class="text-primary">{{ result }}</span></h4>
-  </div>
-</div>
+<router-outlet></router-outlet>
