@@ -10,6 +10,6 @@ export class HomeComponentComponent {
 register=true;
 
 cambiarForm(){
-  this.register=false;
+  this.register=!this.register;
 }
 }

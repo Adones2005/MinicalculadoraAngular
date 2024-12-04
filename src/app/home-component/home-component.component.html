@@ -1,8 +1,5 @@
 <app-login *ngIf="register; else noRegister" (changeFormEvent)="cambiarForm()"></app-login>
 
 <ng-template #noRegister>
-    <app-register ></app-register>
+  <app-register (changeFormEvent)="cambiarForm()"></app-register>
 </ng-template>
-
-
-
