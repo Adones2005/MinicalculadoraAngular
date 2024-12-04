@@ -11,11 +11,6 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 
-const appRoutes:Routes=[
-  {path:'',component:HomeComponentComponent},
-  {path:'calculadora',component:CalcComponentComponent}
-]
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +21,7 @@ const appRoutes:Routes=[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     FormsModule
   ],
   providers: [],
