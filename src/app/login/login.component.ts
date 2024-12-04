@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { AlertDataBaseService } from '../alert-data-base.service';
 
 @Component({
   selector: 'app-login',
@@ -9,9 +10,17 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class LoginComponent {
 
+  constructor( private alertService: AlertDataBaseService){}
+
   @Output() changeFormEvent = new EventEmitter<string>();
 
   changeForm(){
     this.changeFormEvent.emit();
   }
+
+  CreateAccount(): void {
+    this.alertService.showAlert();
+  }
+
+
 }

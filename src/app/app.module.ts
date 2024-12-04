@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { CalcComponentComponent } from './calc-component/calc-component.component';
-import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AlertDataBaseService } from './alert-data-base.service';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { RegisterComponent } from './register/register.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AlertDataBaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
