@@ -9,6 +9,9 @@ import { CalcComponentComponent } from './calc-component/calc-component.componen
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AlertDataBaseService } from './alert-data-base.service';
+import { DataService } from './data.service';
+import { provideHttpClient } from '@angular/common/http';
+import { RegistroComponent } from './registro/registro.component';
 
 
 @NgModule({
@@ -17,14 +20,15 @@ import { AlertDataBaseService } from './alert-data-base.service';
     HomeComponentComponent,
     CalcComponentComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [AlertDataBaseService],
+  providers: [AlertDataBaseService, DataService, provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

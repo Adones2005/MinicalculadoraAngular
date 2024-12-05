@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { AlertDataBaseService } from '../alert-data-base.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -22,5 +23,8 @@ export class LoginComponent {
     this.alertService.showAlert();
   }
 
-
+  login (form:NgForm){
+    const email = form.value.email;
+    const password = form.value.password;
+  }
 }
