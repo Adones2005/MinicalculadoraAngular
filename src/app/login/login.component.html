@@ -16,17 +16,18 @@
       <hr class="my-3">
 
       <!-- Formulario de login -->
-      <form>
+      <form #miFormulario="ngForm" (ngSubmit)="login(miFormulario)">
         <div class="form-floating mb-3">
-          <input type="text" class="form-control" id="loginEmail" name="email" placeholder="Email" required>
-          <label for="loginEmail"><i class="bi bi-person-circle me-2"></i>Email</label>
+          <input type="email" class="form-control" id="loginEmail" name="email" placeholder="Email" ngModel required>
+          <label for="loginEmail">Email</label>
         </div>
         <div class="form-floating mb-3">
-          <input type="password" class="form-control" id="loginPassword" placeholder="Contraseña" required>
-          <label for="loginPassword"><i class="bi bi-lock-fill me-2"></i>Contraseña</label>
+          <input type="password" class="form-control" id="loginPassword" name="password" placeholder="Contraseña" ngModel required>
+          <label for="loginPassword">Contraseña</label>
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="CreateAccount()">Iniciar sesión</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Iniciar sesión</button>
       </form>
+      
 
       <p class="mt-3 mb-0 text-muted">¿No tienes una cuenta? <span class="text-primary" role="button" style="cursor: pointer;" (click)="changeForm()">Regístrate aquí</span></p>
     </div>

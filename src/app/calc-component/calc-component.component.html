@@ -29,15 +29,45 @@
     </div>
 
     <!-- Columna derecha: Registro -->
-    <div class="col-md-6">
-      <div class="card shadow-sm p-4">
-        <h4 class="text-center">Registro de Datos</h4>
-        <ul class="list-group mt-3">
-          <li class="list-group-item" *ngFor="let registro of registros">
-            {{ registro }}
-          </li>
-        </ul>
+    <div class="container mt-4">
+      <div class="row">
+        <!-- Columna izquierda: Calculadora -->
+        <div class="col-md-6">
+          <div class="card shadow-sm p-4">
+            <form class="mb-3">
+              <div class="mb-3">
+                <label for="num1" class="form-label">Número 1:</label>
+                <input type="number" [(ngModel)]="num1" name="num1" class="form-control">
+              </div>
+    
+              <div class="mb-3">
+                <label for="num2" class="form-label">Número 2:</label>
+                <input type="number" [(ngModel)]="num2" name="num2" class="form-control">
+              </div>
+    
+              <div class="d-flex justify-content-center gap-2">
+                <button type="button" class="btn btn-primary" (click)="sumar()">Sumar</button>
+                <button type="button" class="btn btn-secondary" (click)="resta()">Restar</button>
+                <button type="button" class="btn btn-success" (click)="multiplicar()">Multiplicar</button>
+                <button type="button" class="btn btn-danger" (click)="dividir()">Dividir</button>
+              </div>
+            </form>
+    
+            <h4 class="text-center mt-4">
+              Resultado: <span *ngIf="calculado" class="text-primary">{{ result }}</span>
+            </h4>
+          </div>
+        </div>
+    
+        <!-- Columna derecha: Registro -->
+        <div class="col-md-6">
+          <div class="card shadow-sm p-4">
+            <h4 class="text-center">Registro de Datos</h4>
+    
+            <!-- Correctly bind registros to the RegistroComponent -->
+            <app-registro [registros]="registros"></app-registro>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    

@@ -9,7 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class RegistroComponent {
 
-  
+  @Input() registros: string[] = []; 
 
-  @Input() registro: string = ''; 
 }
