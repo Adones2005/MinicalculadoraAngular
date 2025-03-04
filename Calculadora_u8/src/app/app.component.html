@@ -1,0 +1,35 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="row w-100 justify-content-center">
+      <div class="col-md-5">
+        <div class="card calculator-card shadow-lg p-4">
+          <h2 class="text-center text-light mb-4">Calculadora</h2>
+  
+          <form>
+            <div class="mb-3">
+              <label for="num1" class="form-label text-light">Número 1:</label>
+              <input type="number" [(ngModel)]="num1" name="num1" class="form-control input-field" placeholder="0">
+            </div>
+  
+            <div class="mb-3">
+              <label for="num2" class="form-label text-light">Número 2:</label>
+              <input type="number" [(ngModel)]="num2" name="num2" class="form-control input-field" placeholder="0">
+            </div>
+            <app-operaciones
+            [num1]="num1"
+            [num2]="num2"
+            (result)="manejarResultado($event)"
+            (calculado)="manejarCalculado($event)">
+          </app-operaciones>
+          </form>
+  
+          <h4 class="text-center mt-4 text-light">
+            Resultado: 
+            @if (calculado) {
+              <span class="result-display">{{ result }}</span>
+            }
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,40 @@
+/* Fondo general */
+body {
+    background: linear-gradient(135deg, #1e1e2e, #252537);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* Estilo de la tarjeta de la calculadora */
+  .calculator-card {
+    background: #2c2c3b;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Campos de entrada */
+  .input-field {
+    background: #3a3a4d;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+  }
+  
+  .input-field:focus {
+    background: #444459;
+    outline: none;
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2);
+  }
+
+  .input-field::placeholder {
+    color: #cccccc; /* Gris claro */
+  }
+  
+  /* Resultado con efecto neón */
+  .result-display {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0ef;
+    text-shadow: 0px 0px 10px rgba(0, 238, 255, 0.8);
+  }
+  
